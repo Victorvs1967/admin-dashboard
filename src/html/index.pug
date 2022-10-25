@@ -1,0 +1,187 @@
+extends includes/_layout
+
+block title
+  title Resposive Admin Dashboard 
+
+block content
+  navigation.container
+    .navigation
+      ul.navigation__list
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('apple', 'navigation__icon_brand')
+            span.navigation__title
+              h4 Brand Name
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('house', 'navigation__icon')
+            span.navigation__title Dashboard
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('users', 'navigation__icon')
+            span.navigation__title Customers
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('message', 'navigation__icon')
+            span.navigation__title Message
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('circle-question', 'navigation__icon')
+            span.navigation__title Help
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('gear', 'navigation__icon')
+            span.navigation__title Settings
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('lock', 'navigation__icon')
+            span.navigation__title Password
+        li.navigation__item
+          a(href="#!").navigation__link
+            +svg-icon('right-from-bracket', 'navigation__icon')
+            span.navigation__title Sign Out
+
+  main.main
+    .main-topbar
+      .main-topbar__toggle
+        button.burger-menu__control
+          span.burger__item
+          span.close__item      
+      .main-topbar__search
+        label.main-topbar__search_label
+          input(type="text", placeholder="Search here...").main-topbar__search_input
+      .main-topbar__user
+        img(src="@img/avatar.jpg", alt="user").main-topbar__user_image
+    .main-cardbox
+      .main-cardbox__card
+        .wrapper
+          .main-cardbox__number 1,042
+          .main-cardbox__name Daily Views
+        .main-cardbox__icon
+          +svg-icon('eye', 'card__icon')
+      .main-cardbox__card
+        .wrapper
+          .main-cardbox__number 80
+          .main-cardbox__name Sales
+        .main-cardbox__icon
+          +svg-icon('cart-shopping', 'card__icon')
+      .main-cardbox__card
+        .wrapper
+          .main-cardbox__number 210
+          .main-cardbox__name Comments
+        .main-cardbox__icon
+          +svg-icon('comment', 'card__icon')
+      .main-cardbox__card
+        .wrapper
+          .main-cardbox__number $6,050
+          .main-cardbox__name Earning
+        .main-cardbox__icon
+          +svg-icon('dollar-sign', 'card__icon')
+    .main-details
+      .main-details__orders
+        .main-details__header
+          h4.main-details__title Recent Orders
+          a(href="#!").main-details__button View All
+        table.main-details__table
+          thead
+            tr
+              td Name
+              td Price
+              td Payment
+              td Status
+          tbody
+            tr
+              td Star Refrigerator
+              td $1200
+              td Paid
+              td 
+                span.main-details__status.delivered Delivered
+            tr
+              td Window Coolers
+              td $110
+              td Due
+              td 
+                span.main-details__status.pending Pending
+            tr
+              td Speakers
+              td $620
+              td Paid
+              td 
+                span.main-details__status.return Return
+            tr
+              td MacBook Air
+              td $1100
+              td Paid
+              td 
+                span.main-details__status.inprogress In Progress
+            tr
+              td Window Coolers
+              td $110
+              td Due
+              td 
+                span.main-details__status.pending Pending
+            tr
+              td Speakers
+              td $620
+              td Paid
+              td 
+                span.main-details__status.return Return
+            tr
+              td MacBook Air
+              td $1100
+              td Paid
+              td 
+                span.main-details__status.inprogress In Progress
+            tr
+              td Apple Watch
+              td $750
+              td Paid
+              td 
+                span.main-details__status.delivered Delivered
+      .main-details__customers
+        .main-details__header
+          h4.main-details__title Recent Customers
+        table.main-details__customers_table
+          tbody
+            tr
+              td(width= 60)
+                .main-details__customers_image
+                  img(src="@img/avatar.jpg", alt="user")
+              td 
+                h5 David <br>
+                  span Italy
+            tr
+              td(width= 60)
+                .main-details__customers_image
+                  img(src="@img/person01.jpg", alt="user")
+              td 
+                h5 Muhhamad <br>
+                  span India
+            tr
+              td(width= 60)
+                .main-details__customers_image
+                  img(src="@img/person02.jpg", alt="user")
+              td 
+                h5 Amalia <br>
+                  span France
+            tr
+              td(width= 60)
+                .main-details__customers_image
+                  img(src="@img/person03.jpg", alt="user")
+              td 
+                h5 John <br>
+                  span USA
+            tr
+              td(width= 60)
+                .main-details__customers_image
+                  img(src="@img/person04.jpg", alt="user")
+              td 
+                h5 Amit <br>
+                  span Japan
+            tr
+              td(width= 60)
+                .main-details__customers_image
+                  img(src="@img/person05.jpg", alt="user")
+              td 
+                h5 Jane <br>
+                  span UK
