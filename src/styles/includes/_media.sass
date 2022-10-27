@@ -1,44 +1,45 @@
-@media(max-width: 765px)
-  #toggle-menu
+@media(max-width: 992px)
+  .main
     width: 100%
-    padding: .8rem
-    clear: both
-    display: flex
-    justify-content: center
-    background: $main-yellow
-    transition: .3s linear all
-    -webkit-transition: .3s linear all
-    &:hover
-      background: $main-yellow-dark
-  #checkbox-menu:checked + label
-    .header-nav__menu
-      &_touch
-        height: 35rem
-      &_item
-        opacity: 1
-        visibility: visible
-        transition: .4s linear all
-        -webkit-transition: .4s linear all
-        padding: 0.3rem 0
-  .header-nav__menu
-    height: 0
-    &_link
-      margin: 0 auto
-    &_item
-      display: flex
-      align-self: center
-      width: 95%
-      opacity: 0
-      visibility: hidden
-    &_touch
-      display: flex
-      flex-direction: column
-      justify-content: space-around
-      align-items: center
-      transition: .4s linear height
-      -webkit-transition: .4s linear height
-      .contacts,
-      .logo
-        margin-right: 0
-      .logo
-        font-size: 2rem
+    left: 0
+    &.active
+      width: calc(100% - 30rem)
+      left: 30rem
+    &-cardbox
+      grid-template-columns: repeat(2, 1fr)
+      padding: 2rem 0
+    &-details
+      padding: 0
+      &__orders
+        overflow-x: auto
+
+@media(max-width: 768px)
+  h4
+    font-size: 2.2rem
+  .main
+    &-details
+      grid-template-columns: repeat(1, 1fr)
+      padding: 0
+ 
+@media(max-width: 480px)
+  .main
+    &.active
+      position: fixed
+      left: 100%
+      .main-topbar
+        &__toggle
+          +burger($main-white, 2.8rem, 0, 4rem)
+          .burger-menu__control
+            position: relative
+            .burger__item
+              display: block
+            .close__item
+              display: none
+    &-cardbox
+      grid-template-columns: repeat(1, 1fr)
+    &-details
+      &__table
+        width: 60rem
+  .navigation.active
+    width: 100vw
+    overflow-x: hidden
